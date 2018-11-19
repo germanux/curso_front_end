@@ -1,5 +1,5 @@
 <formas de_guardar="Informacion en XML">
-
+<puzzle/>
 	<puzzle tipo= "relacionar">
 		<pareja>
 			<imagen posX="75" posY="75" width="200">
