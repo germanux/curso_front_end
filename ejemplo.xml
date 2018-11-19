@@ -1,0 +1,45 @@
+<formas de_guardar="Informacion en XML">
+
+	<puzzle tipo= "relacionar">
+		<pareja>
+			<imagen posX="75" posY="75" width="200">
+				hkjash fsd fkljashd987a908s7 yuih34kljwehrf jklasdh fkjasbd nfm,sdaba waejkr bnfvu8oy woeui4rthkewjlrtjk sdb
+			</imgagen>
+		</pareja>
+	</puzzle>	
+	<persona nombre="Fernando" 
+			  apellidos="Fernandez Fernandez">		  
+		<contacto telefono="666 555 999"
+				  direccion="Calle...."
+				  email="jsdklf@sdf.com">
+		</contacto>
+		<description>
+			Esta persona no se que jukkj
+		</description>
+		<trabajo>
+			<contacto telefono="666 555 999"
+					  direccion="Calle...."
+					  email="jsdklf@sdf.com">
+			</contacto>			
+		</trabajo>		
+	</persona>
+	<contactos>
+		<contacto>
+			<nombre>Fernando</nombre>
+			<apellidos>Fernandez Fernandez</apellidos>
+			<telefono>666 555 999</telefono>
+		</contacto>
+		<contacto nombre="Fernando" 
+				  apellidos="Fernandez Fernandez">
+			<telefono>666 555 999</telefono>
+		</contacto>
+		<contacto nombre="Fernando" 
+				  apellidos="Fernandez Fernandez"
+			      telefono="666 555 999">
+		</contacto>
+		<contacto/>
+		<!-- Etiqueta mal hecha:  -->
+		<!-- <conta cto nombre="Fernando"  telef ono="666 555 999"
+		</contacto> -->
+	</contactos>
+</formas>
