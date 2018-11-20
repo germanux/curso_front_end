@@ -1,0 +1,29 @@
+Tecno-Empleo:
+	Java: 813
+	diseñador: 11
+
+	JavaScript: 484 
+	html5: 204
+	CSS3: 142 	css: 199
+
+	angular: 285
+	react: 90
+
+	Git: 235 
+	Subversion: 21
+	
+InfoJobs:
+	Java:		1.783	
+	diseñador web: 75
+	
+	JavaScript: 1229	
+	html5: 	584
+	CSS3:  400	css: 601
+
+	angular: 589 
+	react: 	 238
+
+	Git:  	603
+	Subversion: 	80
+	Bootstrap: 269
+	
