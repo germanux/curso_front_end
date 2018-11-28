@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Bucles</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+		<h1>Bucles</h1>
+	</body>
+	<script>
+	
+/* Realizar una cuenta desde un comienzo a un final
+independientemente de si el comienzo es posterior al
+final.
+CON VALIDACIÓN DE DATOS: Pedir el inicio y el fin de contador hasta que sea un número, es decir, asegurarse de que los valores que introduce el usuario son números, ¿Cómo?
+Con un bucle que se ejecuta una y otra vez mientras que el valor (inicio o fin) NO es un número. */
+// Alternando valores, cambiando < por >, y restando
+
+var inicio;
+var fin = null;
+// Sin variable intermedia
+while ( isNaN(inicio)  ) {
+	inicio = prompt("Indique el inicio");
+	inicio = parseInt(inicio);	
+}
+// Sin variable intermedia
+while ( isNaN(fin) ) {
+	fin = prompt("Indique el inicio");	
+	fin = parseInt(fin);
+}
+
+
+/* = prompt("Indique el final");
+inicio = parseInt(inicio);
+fin = parseInt(fin);
+*/
+
+////  BUCLE FUERA, CONDIONAL POR DENTRO:
+// 2 Bucle mientras que contador
+var sumar = Math.sign(fin - inicio)
+var  contador =inicio
+
+while (contador != fin){
+	alert (contador)
+	contador=contador + sumar;
+}
+/*
+- Que pregunte al usuario el principio y el final de la cuenta:
+		- Si pone inicio 3, y fin 7:
+			3, 4, 5, 6
+		- Si pone inicio 5 y fin 2:
+			5, 4, 3 te
+	- Con el bucle fuera del if (o el if dentro while)
+	- Sin ningún "if" (dos bucles)
+	- Con un único while, sin IF
+*/
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+

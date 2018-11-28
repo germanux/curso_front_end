@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Bucles</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+		<h1>Bucles</h1>
+	</body>
+	<script>
+// Alternando valores, cambiando < por >, y restando
+var inicio = prompt("Indique el inicio");
+var fin = prompt("Indique el final");
+inicio = parseInt(inicio);
+fin = parseInt(fin);
+
+var contador = inicio;
+/* Realizar una cuenta desde un comienzo a un final
+independientemente de si el comienzo es posterior al
+final */
+////  BUCLE FUERA, CONDIONAL POR DENTRO:
+// 2 Bucle mientras que contador
+ 
+while(inicio<fin && contador<=fin){
+	alert(contador);
+	contador=contador+1;	
+}
+while(inicio>fin && contador>=fin){
+	alert(contador);
+	contador=contador-1;	
+}
+
+/*
+- Que pregunte al usuario el principio y el final de la cuenta:
+		- Si pone inicio 3, y fin 7:
+			3, 4, 5, 6
+		- Si pone inicio 5 y fin 2:
+			5, 4, 3 te
+	- Con el bucle fuera del if (o el if dentro while)
+	- Sin ningún "if" (dos bucles)
+	- Con un único while, sin IF
+*/
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
