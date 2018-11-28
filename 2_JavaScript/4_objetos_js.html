@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Objeto document</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+		<h1>Objeto document</h1>
+<script>
+
+	// document: objeto que corresponde al documento HTML
+	// write: es una función propia del objeto document, es decir, un método. 
+	document.write("Un texto cualquiera");
+	document.write("<h2> Cabecera 2º nivel </h2>");
+	
+	var nombre = "";
+	var textoEdad = "";
+	var edad = parseInt(textoEdad);
+
+	while ( isNaN(edad) || edad <= 0 ) {
+		textoEdad = prompt("Indique su edad:");
+		edad = parseInt(textoEdad);
+	}
+	while (nombre == "" 
+		  || isNaN(parseInt(nombre)) == false) {
+		nombre = prompt("Indique su nombre:");
+	}
+	// parseInt: Convierte texto en número
+	//		"27"  			->    27
+	//		"texto sin num" ->	  NaN
+	
+	document.write("<br/>Anda! Te llamas " + nombre
+				   + " y tienes " + edad);				   
+	alert("Hola " + nombre 
+		+ ":\n \t- Tu edad es:\n \t- \" "+ edad
+		+ " años \" ");
+				   
+	
+		
+	/* OTRA MANERA DE COMPROBAR:
+	while ( isNaN(edad)) {
+		textoEdad = prompt("Indique su edad:");
+		edad = parseInt(textoEdad);
+		while (edad <= 0) {
+			textoEdad = prompt("Indique su edad:");
+			edad = parseInt(textoEdad);
+	} }*/	
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

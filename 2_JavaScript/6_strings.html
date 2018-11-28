@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Strings, métodos y propiedades</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+		<h1>Strings, métodos y propiedades</h1>
+<script>
+var texto = prompt("Introduzca un texto");
+document.write("Su texto:<br/>");
+document.write(texto + "<br/>");
+
+document.write("<br/>Longitud: ".concat(texto.length)
+	.concat(" carateres"));
+document.write("<br/>En mayúsculas: " + texto.toUpperCase());
+document.write("<br/>En minúsculas: " + texto.toLowerCase());
+document.write("<br/>");
+document.write("Primer car&aacute;cter: " + texto.charAt(0));
+document.write("<br/>");
+document.write("Quinto car&aacute;cter: " + texto.charAt(4));
+document.write("<br/>");
+document.write("Primer espacio está en:" + texto.indexOf(" "));
+document.write("<br/>Primera mitad del texto: " 
+			+ texto.substring( 0, texto.length / 2));
+document.write("<br/>Segunda mitad del texto: " 
+			+ texto.substring( texto.length / 2));
+// Ejercicio 1 por partes
+var primeraLetra = texto.charAt(0);
+var restoTexto = texto.substring(1);
+var primeraLetraMayus = primeraLetra.toUpperCase();
+var restoTextoMinus = restoTexto.toLowerCase();
+document.write("<br/>" + primeraLetraMayus + restoTextoMinus);
+// Ejercicio 1 del tirón
+document.write("<br/>" + texto.charAt(0).toUpperCase() 
+		     + texto.substring(1).toLowerCase());
+
+
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
