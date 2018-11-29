@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Strings, métodos y propiedades</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+		<h1>Strings, métodos y propiedades</h1>
+<script>
+//var texto = prompt("Introduzca un texto");
+		//	 0123456789
+var texto = "a juan perez lopez y rodriguez x";
+
+var posEspacio_1 = texto.indexOf(" ");
+var inicial = texto.charAt(0).toUpperCase();
+var restoPalabra = texto.substring(1, posEspacio_1).toLowerCase();
+var propperCase = inicial + restoPalabra;
+var posEspacio_2;
+
+while (posEspacio_1 >= 0)
+{
+	posEspacio_2 = texto.indexOf(" ", posEspacio_1 + 1);
+	if (posEspacio_2 == -1) {
+		posEspacio_2 = texto.length;
+	}
+	inicial = texto.charAt(posEspacio_1 + 1).toUpperCase();
+	restoPalabra = texto.substring(posEspacio_1 + 2, posEspacio_2);
+	propperCase = propperCase + " " + inicial + restoPalabra;
+	posEspacio_1 = texto.indexOf(" ", posEspacio_1 + 1);
+}
+document.write(propperCase + "<br/>");
+
+
+
+
+
+
+
+// Resolviendo el 2º: JUAN PEREZ
+// Mostrar en Proper Case
+var posPrimerEspacio = texto.indexOf(" ");	// 4
+var primeraPalabra = texto.substring(0, posPrimerEspacio);
+// Mostrar en Proper Case (Primera Mayuscula) SÓLO la primeraPalabra
+document.write("<br/>" 
+			+ primeraPalabra.charAt(0).toUpperCase() 
+		    + primeraPalabra.substring(0+1).toLowerCase());
+
+var segundaPalabra = texto.substring(
+	posPrimerEspacio + 1, texto.length);
+var posSegundoEspacio = segundaPalabra.indexOf(" ");
+segundaPalabra  = segundaPalabra.substring(0, posSegundoEspacio); 
+
+document.write("<br/>" 
+			+ segundaPalabra.charAt(0).toUpperCase() 
+		     + segundaPalabra.substring(0+1).toLowerCase());
+
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

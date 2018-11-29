@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Strings, métodos y propiedades</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+		<h1>Strings, métodos y propiedades</h1>
+<script>
+
+/* Ejercicio 3: Mostrar Iniciales en Mayusculas */
+//var texto = prompt("Introduzca un texto");
+		//	 0123456789
+var texto = "juanito rodriguez lopez perez de todos santos por sergio heredero de isildur";
+texto = "aaa bbb ccc ddd eee";
+//////////////////////////////////
+var posEspacio = 0;
+// Inicializamos letra al primer caracter
+var letra = texto.charAt(0).toUpperCase();	
+var iniciales = "";
+// Que pase del espacio a la siguiente letra
+// Y la ponga mayuscula
+while (posEspacio >= 0) { // Mientras consigamos un espacio, ya que indexOf devuelve -1 si no encuentra
+	// Lo primero, añadimos la letra a las iniciales.
+	// La primera vez añade la primera inicial, en las siguientes veces añade la siguiente letra al espacio encontrado
+	iniciales = iniciales + letra;
+	// Buscamos un espacio a partir de la posición encontrada anteriormente
+	posEspacio = texto.indexOf(" ", posEspacio + 1);
+	// Cogemos la letra. Si posEspacio==-1, coge la primera inicial, pero la desechamos en la siguiente pasada
+	letra = texto.charAt(posEspacio + 1).toUpperCase();
+}
+document.write(iniciales + "<br/>");
+
+//////////////////////////////////
+var posEspacio1 = texto.indexOf(" ");
+var letra_1 = texto.charAt(0).toUpperCase();
+document.write(texto + "<br/>");
+document.write(letra_1);
+
+var letra_2 = texto.charAt(posEspacio1 + 1).toUpperCase();
+document.write(letra_2);
+
+var posEspacio2 = texto.indexOf(" ", posEspacio1 + 1);
+var letra_3 = texto.charAt(posEspacio2 + 1).toUpperCase();
+document.write(letra_3);
+
+var posEspacio3 = texto.indexOf(" ", posEspacio2 + 1);
+var letra_4 = texto.charAt(posEspacio3 + 1).toUpperCase();
+document.write(letra_4);
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

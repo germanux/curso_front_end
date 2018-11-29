@@ -26,15 +26,28 @@ document.write("<br/>Primera mitad del texto: "
 			+ texto.substring( 0, texto.length / 2));
 document.write("<br/>Segunda mitad del texto: " 
 			+ texto.substring( texto.length / 2));
+			
 // Ejercicio 1 por partes
 var primeraLetra = texto.charAt(0);
 var restoTexto = texto.substring(1);
 var primeraLetraMayus = primeraLetra.toUpperCase();
 var restoTextoMinus = restoTexto.toLowerCase();
 document.write("<br/>" + primeraLetraMayus + restoTextoMinus);
+
+
 // Ejercicio 1 del tirón
+// Mostrar en Proper Case (Primera Mayuscula
 document.write("<br/>" + texto.charAt(0).toUpperCase() 
-		     + texto.substring(1).toLowerCase());
+		     + texto.substring(0+1).toLowerCase());
+
+// Resolviendo el 3º:
+// JUAN PEREZ
+var posPrimerEspacio = texto.indexOf(" ");	// 4
+var primeraPalabra = texto.substring(0, posPrimerEspacio);
+// Mostrar en Proper Case (Primera Mayuscula) SÓLO la primeraPalabra
+document.write("<br/>" 
+			+ primeraPalabra.charAt(0).toUpperCase() 
+		     + primeraPalabra.substring(0+1).toLowerCase());
 
 
 </script>
