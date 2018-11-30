@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Ejemplos objetos</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body><h1>Ejemplos objetos</h1>	
+<script>	
+	// Llamamos a la función constructora del objeto básico de JS. Con la palabra clave new, le decimos a JS que queremos un nuevo objeto (invocando a alguna función constructora) del tipo que sea, en este caso el básico de JS.
+	var miPrimerObj = new Object();
+	miPrimerObj.unSubValor = 10;
+	miPrimerObj.otraPropiedad = "Un texto";
+	miPrimerObj.atributoObjeto = new Object();
+	miPrimerObj.variableMiembro = true;
+	
+	var persona_1 = new Object();
+	persona_1.nombre = "Ana";
+	
+	persona_1.apellido_1 = "Perez";
+	persona_1.apellido_2 = "Rodriguez";
+	persona_1.edad = 25;
+	persona_1.salario = 
+		prompt("Dime el salario de "+ persona_1.nombre );
+	persona_1.salario = parseFloat(persona_1.salario);
+	if (persona_1.salario > 0) {
+		persona_1.tieneTrabajo = true;
+	} else {
+		persona_1.tieneTrabajo = false;
+	}	
+	document.write(persona_1.apellido_1 + " " 
+		+ persona_1.apellido_2 + ", " + persona_1.nombre);
+	document.write("<br/>");
+	document.write("Edad: " + persona_1.edad);
+	if (persona_1.tieneTrabajo) {
+		document.write("<br/> Tiene trabajo");		
+	} else {
+		document.write("<br/> No tiene trabajo");
+	}
+	document.write("<br/> Salario: " + persona_1.salario);	
+	
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

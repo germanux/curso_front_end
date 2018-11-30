@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Ejemplos objetos</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body><h1>Ejemplos objetos</h1>	
+<script>
+	var persona_1 = new Object();
+	persona_1.nombre = "lana"; 	persona_1.edad = 25;
+	persona_1.datos = persona_1.nombre + ", " + persona_1.edad + " años";
+	var persona_2 = new Object();
+	persona_2.nombre = "germán"; persona_2.edad = 36;
+	persona_2.datos = persona_2.nombre + ", " + persona_2.edad + " años";	
+	var orden = "e"; // prompt("Introduzza orden (E=edad, N = nombre)");
+	if (orden.toUpperCase() == "E") 
+	{
+		if (persona_1.edad < persona_2.edad) 
+		{
+			document.write(persona_1.datos);
+			document.write(persona_2.datos);
+		} else {
+			document.write(persona_2.datos);
+			document.write(persona_1.datos);
+		}
+	} else if (orden.toUpperCase() == "N") 
+	{
+		if (persona_1.nombre.toUpperCase() < persona_2.nombre.toUpperCase()) 
+		{
+			document.write(persona_1.datos);
+			document.write(persona_2.datos);
+		} else {
+			document.write(persona_2.datos);
+			document.write(persona_1.datos);
+		}
+	}	
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
