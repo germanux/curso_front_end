@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Ejemplos arrays</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body><h1>Ejemplos arrays</h1>	
+<script>
+	var notas = new Array();
+	notas[0] = 3; notas[1] = 7; notas[2] = 8.5; notas[3] = 10; notas[4] = 5.5;	
+	
+	var i = 0;
+	while(i < 7) {
+		document.write("<br/> Elemento " + i + ": " + notas[i]);
+		i = i + 1;
+	}
+	
+	var ciudades = ["Madrid", "Barcelona", "Cordoba"];
+	i = 0;
+	while(i < 3) {
+		document.write("<br/>" + i + ": " + ciudades[i]);
+		i = i + 1;
+	}
+	var marcas = new Array("Kia", "Seat", "Mercedes");
+	var arrayVacio = [];	// new Array()
+	
+	var moviles = new Array();
+	moviles[0] = new Object();
+	moviles[0].marca = "Sony Ericsson";
+	moviles[0].ram = 2;
+	
+	moviles[1] = new Object();
+	moviles[1].marca = "Samsung";
+	moviles[1].ram = 3;
+		
+	moviles[2] = new Object();
+	moviles[2].marca = "Samsung";
+	moviles[2].ram = 4;
+		
+	moviles[1].ram = 6;
+	document.write("<br/>Nueva RAM:" + moviles[1].ram + " Gb");
+	
+	document.write("<br/>RAM Ultimo elemento:" 
+		+ moviles[moviles.length - 1].ram + " Gb");
+	
+	
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
