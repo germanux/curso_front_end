@@ -8,15 +8,43 @@
 	<body><h1>Ejemplos objetos</h1>	
 <script>
 	var persona_1 = new Object();
-	persona_1.nombre = "lana"; 	persona_1.edad = 25;
+	persona_1.nombre = "lana";
+	persona_1.apellidos_1 = "perez";
+	persona_1.apellidos_2 = "lopez";
+	persona_1.edad = 25;
+	persona_1.salario = 25000;	
 	persona_1.datos = persona_1.nombre + ", " + persona_1.edad + " años";
+	
 	var persona_2 = new Object();
-	persona_2.nombre = "germán"; persona_2.edad = 36;
+	persona_2.nombre = "germán";
+	persona_2.apellidos_1 = "rodriguez";
+	persona_2.apellidos_2 = "lopez";
+	persona_2.edad = 36;
+	persona_2.salario = 12000;
 	persona_2.datos = persona_2.nombre + ", " + persona_2.edad + " años";	
+	
+	var persona_3 = new Object();
+	
 	var orden = "e"; // prompt("Introduzza orden (E=edad, N = nombre)");
 	if (orden.toUpperCase() == "E") 
 	{
-		if (persona_1.edad < persona_2.edad) 
+		if (persona_1.edad < persona_2.edad && persona_2.edad < persona_3.edad) 
+		{
+			document.write(persona_1.datos);
+			document.write(persona_2.datos);
+			document.write(persona_3.datos);
+		} else if (persona_1.edad < persona_3.edad && persona_3.edad < persona_2.edad) {
+			document.write(persona_1.datos);
+			document.write(persona_3.datos);
+			document.write(persona_2.datos);
+		}else if (persona_2.edad < persona_1.edad && persona_1.edad < persona_3.edad) {
+			document.write(persona_1.datos);
+			document.write(persona_3.datos);
+			document.write(persona_2.datos);
+		} /// con 3 else if más
+	} else if (orden.toUpperCase() == "N") 
+	{
+		if (persona_1.nombre.toUpperCase() < persona_2.nombre.toUpperCase()) 
 		{
 			document.write(persona_1.datos);
 			document.write(persona_2.datos);
@@ -24,9 +52,9 @@
 			document.write(persona_2.datos);
 			document.write(persona_1.datos);
 		}
-	} else if (orden.toUpperCase() == "N") 
+	} else if (orden.toUpperCase() == "A") 
 	{
-		if (persona_1.nombre.toUpperCase() < persona_2.nombre.toUpperCase()) 
+		if (persona_1.apellidos_1.toUpperCase() < persona_2.apellidos_1.toUpperCase()) 
 		{
 			document.write(persona_1.datos);
 			document.write(persona_2.datos);

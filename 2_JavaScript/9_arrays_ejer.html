@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Ejercicios arrays - ciudades</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body><h1>Ejercicios arrays - ciudades</h1>	
+<script>
+	var i = 0;
+	var ciudades = new Array();
+	var nuevaCiudad = prompt("Introduzca una ciudad (o nada para terminar)");
+	while (nuevaCiudad != "") {
+		ciudades[i] = nuevaCiudad;
+		i = i + 1;
+		nuevaCiudad = prompt("Introduzca una ciudad (o nada para terminar)");
+	}	
+	i = 0;
+	while ( i < ciudades.length) {
+		document.write("<br/>" + ciudades[i]);
+		i = i + 1;
+	}
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
