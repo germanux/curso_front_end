@@ -13,11 +13,9 @@
 		<tr> <td>1 * 1 = 1</td>
 			 <td>2 * 1 = 2</td>
 			 <td>3 * 1 = 3</td>   </tr>
-		<tr>
-			<td>1 * 2 = 2</td>
-			<td>2 * 2 = 4</td>
-			<td>3 * 2 = 6</td>
-		</tr>
+		<tr> <td>1 * 2 = 2</td>
+			 <td>2 * 2 = 4</td>
+			 <td>3 * 2 = 6</td>  </tr>
 		<tr>
 			<td>1 * 3 = 3</td>
 			<td>2 * 3 = 6</td>
@@ -28,7 +26,7 @@
 <script>
 	document.write("<table  border=\"1\">");
 	document.write("<tr>");
-	for (var num = 1; num < 4; num++) 
+	for (var num = 1; num < 9; num++) 
 	{
 		document.write("<th>");
 		document.write("Tabla del " + num);
@@ -36,16 +34,17 @@
 	}
 	document.write("</tr>");
 	
-	document.write("<tr>");
-		// AQUI, MOSTRAR UNA Tabla de multiplicar
-	for (num = 1; num < 4; num++) 
-	{
-		document.write("<td>");
-		document.write(num + " * 1 = "+ num);
-		document.write("</td>");
+	for (var fila = 1; fila < 9; fila++) {
+		document.write("<tr>");
+			// AQUI, MOSTRAR UNA Tabla de multiplicar
+		for (num = 1; num < 9; num++) 
+		{
+			document.write("<td>");
+			document.write(num + " * " + fila + " = "+ num * fila);
+			document.write("</td>");
+		}		
+		document.write("</tr>");
 	}	
-	
-	document.write("</tr>");
 	
 	document.write("</table>");
 	
