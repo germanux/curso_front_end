@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Author: Germán Caballero -->
+<html lang="es">
+	<head>
+		<title>Ejemplos bucles for y do-while</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body><h1>Ejemplos bucles for y do-while</h1>
+	<table border='1'>
+		<tr>
+			<th>Tabla del 1</th>
+			<th>Tabla del 2</th>
+			<th>Tabla del 3</th>
+		</tr>
+		<tr>
+			<td>1 * 1 = 1</td>
+			<td>2 * 1 = 2</td>
+			<td>3 * 1 = 3</td>
+		</tr>
+		<tr>
+			<td>1 * 2 = 2</td>
+			<td>2 * 2 = 4</td>
+			<td>3 * 2 = 6</td>
+		</tr>
+		<tr>
+			<td>1 * 3 = 3</td>
+			<td>2 * 3 = 6</td>
+			<td>3 * 3 = 9</td>
+		</tr>		
+	</table>
+<script>
+	// Generar tabla de una columna con bucle for
+	document.write("<table border=\"1\">");
+	document.write("<tr><th> Tabla del 3 </th></tr>");
+	for (var i = 1; i <= 10; i++ ) {
+		document.write("<tr><td>3 * " 
+			+ i + " = " + 3*i + "</td></tr>");
+	}
+	document.write("</table>");
+	
+	// Bucle for anidado en bucle for
+	for (var fila = 1; fila < 10; fila++) 
+	{
+		for (var col = 1; col < 10; col++) {
+			document.write(fila * col + ", ");
+		}
+	}
+	
+	
+	
+	
+	var precio_prod = 90;
+	precio_prod = precio_prod * 1.21;	
+	precio_prod *= 1.21;
+	
+	var j = 10;
+	j = j + 1;
+	j += 1;
+	j++;
+	
+</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
