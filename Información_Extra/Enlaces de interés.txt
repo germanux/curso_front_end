@@ -1,5 +1,11 @@
-https://carlosazaustre.es/
+Repositorio:
+	https://github.com/germanux/curso_front_end
 
-https://github.com/germanux/curso_front_end
+API web:
+	https://devdocs.io
 
-https://devdocs.io
+30 libros desarrollo web:
+	https://www.oyejuanjo.com/2015/11/30-libros-gratis-espanol-desarrollo-web.html
+
+Introducción a CSS:
+	https://openlibra.com/es/book/introduccion-a-css
