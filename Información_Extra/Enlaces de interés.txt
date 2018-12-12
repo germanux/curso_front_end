@@ -1,6 +1,3 @@
-Repositorio:
-	https://github.com/germanux/curso_front_end
-
 API web:
 	https://devdocs.io
 
