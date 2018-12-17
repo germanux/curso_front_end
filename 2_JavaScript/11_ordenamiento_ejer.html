@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+		<h1>Cabecera</h1>
+	</body>
+	<script>
+		var arrayDesord = [8,5,7,9];
+		var arrayOrd = new Array();	
+		var numMenor = arrayDesord[0];
+		var posMenor;
+		
+		for (var i = 0; i < 4; i ++) // i = i + 1
+		{
+			if (numMenor > arrayDesord[i])  {
+				numMenor = arrayDesord[i];
+				posMenor = i;
+			}
+		} 	
+		
+		arrayOrd[0] = numMenor;
+		var segMenor = arrayDesord[0];
+		
+		for (var i = 0; i < 4; i ++) // i = i + 1
+		{
+			if (posMenor != i) {
+				if (segMenor > arrayDesord[i])  {
+					segMenor = arrayDesord[i];
+				}
+			}
+		} 
+		document.write("Num menor=" + numMenor + "<br/>");
+		document.write("Seg menor=" + segMenor + "<br/>");
+		
+		document.write("Array:" + "<br/>");
+		
+		for (var i = 0; i < 4; i ++) // i = i + 1
+		{
+			document.write(arrayDesord[i] + "<br/>");
+		}
+	</script>
+</html>
+
+
+

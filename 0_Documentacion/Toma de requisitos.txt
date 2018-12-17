@@ -3,12 +3,13 @@ Toma de requisitos
 Preguntas del desarrolador:
 	- ¿Qué quieres transmitir?
 		- ¿Qué tipo de profesional eres?
+		
 		- ¿ "   "         "    quieres transmitir que eres? 
 		- ¿Qué emoción quieres que sienta el visititante a tu página?
 		- ¿Qué estética quiere o como se la imagina?
 	- ¿Quién es tu público objetivo?
 	- ¿Va a necesitar mantemiento, actualizaciones o evolutivos?
-		- Qué nivel de estructuración a nivel técnico.
+		- Influye en qué nivel de estructuración a nivel técnico.
 	- ¿Qué clase de interfaz? (intuitivo, complejo..)
 	- ¿Como quieres categorizar la información?
 	- ¿Qué tipo de información quieres mostrar?
@@ -34,4 +35,6 @@ Preguntas del desarrolador:
 	- ¿Para cuándo la quieres?
 	- ¿Presupuesto que tiene?
 	
-Preguntas del cliente o lo que necesita el desarrolador
+Preguntas del cliente o lo que necesita el desarrolador:
+	- ¿Tiene preferencia por alguna tecnología?
+	

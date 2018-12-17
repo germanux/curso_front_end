@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.5em;
+	font-family: 'Montserrat', sans-serif;
+	color: white ;
+	text-shadow: 2px 2px 1px  rgba(0,0,0,0.1);
+}
+
+body{
+	
+}
+
+.bloqueVerde{
+	
+	background-color:green;
+	min-height:10em;
+	margin-left: 10em;
+	margin-right: 10em;
+}
+.bloqueAzul{
+	margin: 1em;
+	min-height:5em;
+	background-color:blue;
+}
+
+.despla{
+	
+	min-height:5em;
+	background-color:blue;
+	
+	position: absolute;
+	
+	right: 0px;
+	width: 10em;
+	top:0px;
+	bottom:0px;
+}
+
+p{
+	padding: 1em ;
+	background-color: aliceblue;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.2) inset;
+}
+.foto {
+		box-shadow: 4px 4px 8px rgba(0,0,0,0.2) inset;
+}
