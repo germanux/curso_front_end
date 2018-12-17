@@ -1,0 +1,39 @@
+Toma de requisitos
+
+Preguntas del desarrolador:
+	- ¿Qué quieres transmitir?
+		- ¿Qué tipo de profesional eres?
+		- ¿ "   "         "    quieres transmitir que eres? 
+		- ¿Qué emoción quieres que sienta el visititante a tu página?
+		- ¿Qué estética quiere o como se la imagina?
+	- ¿Quién es tu público objetivo?
+	- ¿Va a necesitar mantemiento, actualizaciones o evolutivos?
+		- Qué nivel de estructuración a nivel técnico.
+	- ¿Qué clase de interfaz? (intuitivo, complejo..)
+	- ¿Como quieres categorizar la información?
+	- ¿Qué tipo de información quieres mostrar?
+	- ¿Qué es lo primero que quieres mostrar?
+	- ¿Quieres vincularla a RRSS u otras webs?
+	- ¿Cual es el objetivo? (beneficios economicos, darse a conocer, crear comunidad...)
+	- ¿Donde ve las dificultades de cómo comunicar y organizar en caso de tener un portofolio heterógeneo?
+	- ¿Qué tienes para mostrar? ¿o qué trabajos quieres  mostrar? ¿En qué sector quieres trabajar?
+	- ¿Qué formatos quieres mostrar esos trabajos?
+		- Imágenes, videos, texto, audio...
+	- ¿Tienes los recursos o hay que crearlos?
+	- ¿Alguna presentación animada? Detalles extra
+	- ¿Quieres que sea resposive?
+		- Móvil, tablet, PC...
+	- ¿Idiomas?
+	- ¿Cual es tu lugar de actuación?
+		Ciudad, pais, continente...
+	- ¿Qué tecnologías conoces?
+		- Frameworks, lenguajes de prog, IDEs, programas...
+	- ¿Queremos incluir el curriculum?
+	- Clientes anteriores
+	- Trabajos anteriores
+	- ¿Para cuándo la quieres?
+	- ¿Presupuesto que tiene?
+	
+Preguntas del cliente o lo que necesita el desarrolador:
+	- ¿Tiene preferencia por alguna tecnología?
+	
