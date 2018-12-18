@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+    <h1>Cabecera</h1>
+    
+<script>
+    // Función básica: Ni recibe ni devuelve datos, pero hace cosas malas
+    function mostrarTitulo() {
+      document.write("<h2>Sub-Titulo de la pagina</h2>");
+      document.write("<br/>");
+    }
+    var titulo = "Otro título";
+    mostrarTitulo();  // Invocar a la función
+
+    // Función que recibe datos
+    function calculaDescuento(precio, descuento) {
+      
+      var precioConDesc;
+      precioConDesc = precio - precio * descuento / 100;
+      document.write("Precio: " + precio + ", descuento: " + descuento + ", total: " + precioConDesc + "<br/>");
+    }
+    function calcDescGlob() {
+      var precioConDesc = otroPrecio - otroPrecio * otroDescuento / 100;
+      document.write("Precio: " + otroPrecio + ", descuento: " + otroDescuento + ", total: " + precioConDesc + "<br/>");
+    }
+    calculaDescuento(100, 15);  // 15 %
+    calculaDescuento(200, 20);  // 20 %
+    var otroPrecio = 300;
+    var otroDescuento = 10; 
+    calculaDescuento(otroPrecio, 5);  // 5 %
+    calculaDescuento(otroPrecio, otroDescuento);
+    otroPrecio = 1000;
+    otroDescuento = 10; 
+    calcDescGlob();
+    otroPrecio = 500;
+    otroDescuento = 20; 
+    calcDescGlob();
+</script>
+	</body>
+</html>

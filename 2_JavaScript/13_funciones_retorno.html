@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+    <h1>Cabecera</h1>
+    
+<script>
+  // Funciones que devuelven un valor
+  function dameTitulo() {
+    return "Titulo funciones con retorno";
+  }
+  document.write("<H1>" + dameTitulo() + "</H1>");
+  document.write("<H2>" + dameTitulo() + "</H2>");
+  var tituloWeb = "<h3>" + dameTitulo() + "</h3>";
+  document.write(tituloWeb);
+
+  function dateCabecera(texto, nivel) // nivel = H1, H2...
+  {
+    var abreH = "<h" + nivel + ">";
+    var cierraH = "</h" + nivel + ">";
+    return abreH + texto + cierraH;
+  }
+  document.write(dateCabecera("Cabecera nivel 1", 1));
+  document.write(dateCabecera("Cabecera nivel 2", 2));
+  document.write(dateCabecera("Cabecera nivel 3", 3));
+
+</script>
+	</body>
+</html>
