@@ -3,38 +3,66 @@ Toma de requisitos
 Preguntas del desarrolador:
 	- ¿Qué quieres transmitir?
 		- ¿Qué tipo de profesional eres?
-		
-		- ¿ "   "         "    quieres transmitir que eres? 
+			Polivalente, apasionado de su trabajo, multidisciplinar, proactivo con mucha iniciativa propia, creativo y muy técnico.
+		- ¿ "   "         "    quieres transmitir que eres?
+			El que soy, ni más ni menos. En ocasiones me falta constancia, pero no quiero que se note.
 		- ¿Qué emoción quieres que sienta el visititante a tu página?
+			Plena confianza y cierta alegría de encontrarse visitandola sin perder la seriedad
 		- ¿Qué estética quiere o como se la imagina?
+			No lo tengo claro, me gusta la combinación de colores rojo y azul. Me gusta lo moderno frente a lo clásico, lo innovador frente a lo tradicional. Quiero cierta suavidad en la estética, aunque prima lo anterior 
 	- ¿Quién es tu público objetivo?
+		- Empresas de desarrollo exigentes, que quieran alguien para dirigir la parte técnica de sus proyecto, relacionadas con entornos visuales y creativos a ser posible (videojuegos, animación, cine, startups en desarrollo de apps...). También empresas de formación, aunque ya tengo clientela.
 	- ¿Va a necesitar mantemiento, actualizaciones o evolutivos?
 		- Influye en qué nivel de estructuración a nivel técnico.
+		- Un poco, tampoco mucho. No es prioritario, pero tampoco quiero que esté desestructurado dado que una vez al año me gustaría incluir nuevas caracteristicas.
 	- ¿Qué clase de interfaz? (intuitivo, complejo..)
+		- Extremadamente intuitiva, un UX impecable es esencial, por encima de las funcionalidades.
 	- ¿Como quieres categorizar la información?
+		- De la manera más sencilla posible, nada complejo. Dos o 3 opciones por cada aspecto y pocos aspectos.
 	- ¿Qué tipo de información quieres mostrar?
+		Mis servicios, mis capacidades, y proyectos anteriores.
 	- ¿Qué es lo primero que quieres mostrar?
+		Una animación hiper chula que impresione incluso a un director de cine o de videojuegos
 	- ¿Quieres vincularla a RRSS u otras webs?
+		No sé como ni para qué. Quiero ser influencer, gurú, pero no estoy acostumbrado a RRSS. Secundario de momento.
+	- ¿Y no tienes cuenta de LinkedIn?
+		Claro. Aaaah pues conexión a LinkedIn, ¿quizá que me puedan escribir y contactar desde LinkedIn?
 	- ¿Cual es el objetivo? (beneficios economicos, darse a conocer, crear comunidad...)
+		Darme a conocer
 	- ¿Donde ve las dificultades de cómo comunicar y organizar en caso de tener un portofolio heterógeneo?
+		En el material que aun hay publicado.
 	- ¿Qué tienes para mostrar? ¿o qué trabajos quieres  mostrar? ¿En qué sector quieres trabajar?
+		Un videojuego, algunos enlaces a youtube. Tengo una web de mi antigua empresa que debería publicar porque también es portfolio.
 	- ¿Qué formatos quieres mostrar esos trabajos?
 		- Imágenes, videos, texto, audio...
+		- TODOS
 	- ¿Tienes los recursos o hay que crearlos?
+		La mayoría los tengo, aunque habría que adaptarlos a la web (pantallazos de proyectos por ejemplo) y otros ponerlos en marcha. Quizá compilarlos para web e incluirlos en ella de manera permanente, si dependencia a servidores...
 	- ¿Alguna presentación animada? Detalles extra
+		Al empezar, y a ser posible durante la navegación. Por ejemplo:
+				F <- X <- X <- X -> O -> X-> -> F y quizá hacia arriba o hacia abajo
 	- ¿Quieres que sea resposive?
-		- Móvil, tablet, PC...
+		- Móvil, tablet, PC... Por supuesto
 	- ¿Idiomas?
+		Primero en inglés y  en castellano.
 	- ¿Cual es tu lugar de actuación?
-		Ciudad, pais, continente...
+		Ciudad, pais, continente... 1 España, 2 Paises anglosajones, 3 latino-américa
 	- ¿Qué tecnologías conoces?
 		- Frameworks, lenguajes de prog, IDEs, programas...
+		- A very lot.
 	- ¿Queremos incluir el curriculum?
+		Lo que me recomiendes (SI).
 	- Clientes anteriores
+		Si no tengo, habrá que conseguir algunos
 	- Trabajos anteriores
+		Si no tengo, habrá que hacer alguno. Nadie contrata por cara bonita (y mejor no trabajar para quién lo hace).
 	- ¿Para cuándo la quieres?
+		2 meses.
 	- ¿Presupuesto que tiene?
+		2.000 € (2 meses a menos de media jornada).
+	- ¿Información extra, alguna característica a incluir?
+		Me gustaría un formulario innovador de solucitud de servicios/contratación.
 	
 Preguntas del cliente o lo que necesita el desarrolador:
 	- ¿Tiene preferencia por alguna tecnología?
-	
+		Claro: HTML CSS y Angular
