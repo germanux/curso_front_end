@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+    <h1>Cabecera</h1>
+    
+<script>
+  /****** - Crea una función que: ********/
+  /* 2 - Otra Reciba 3 parámetros.
+		Los dos primeros son los operandos, el 3º el operador (suma "+", resta "-", multipl "*", div "/") y que muestre el resultado (dentro de la función)
+      PISTA: Usando condicionales*/
+	// SOLUCIÓN Forma 1, la función de devuelve un valor, este es recogido desde donde se llama y se muestra
+  function operaReturn(op_1, op_2, op) {
+    if (op == "+") { return op_1 + op_2; }
+    else if (op == "-") { return op_1 - op_2; }
+    else if (op == "*") { return op_1 * op_2; }
+    else if (op == "/") { return op_1 / op_2; }
+    else return 0;
+  }
+  document.write("5 + 3 = " + operaReturn(5, 3, "+") + "<br/>" ); // 8
+  document.write("3 x 2 = " + operaReturn(3, 2, "*") + "<br/>" ); // 6
+
+  // Función forma 2, la función calcula internamente el resultado, se guarda temporalmente en una variable LOCAL, se muestra, y el resultado "se pierde" en el sentindo de que no se devuelve.
+  function operaWrite(op_1, op_2, op) {
+    var resultado;
+    if (op == "+") { resultado = op_1 + op_2; }
+    else if (op == "-") { resultado = op_1 - op_2; }
+    else if (op == "*") { resultado = op_1 * op_2; }
+    else if (op == "/") { resultado = op_1 / op_2; }
+    else resultado = 0;
+    document.write("" + op_1 + op + op_2 +" = " + resultado + "<br/>" );
+  }
+  operaWrite(7, 2, "-");  // 7 - 2 = 5
+  operaWrite(24, 6, "/"); // 4
+
+  
+</script>
+	</body>
+</html>
