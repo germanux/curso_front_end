@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      while (condicion) 
+        instrucionUnica;
+        
+      while (condicion) 
+      {
+        intr_1;
+        intr_2;
+      } */
+      var contador = 8;
+      while (contador < 500)   {
+        document.write(contador + " - ");
+        contador = contador + 8;
+      }
+
+      contador = 0;
+      while (contador < 500)  {
+        if (contador % 8 == 0) {
+          document.write(contador + " - ");
+        }
+        contador = contador + 1;
+      }
+      contador = 0;
+      while (contador < 500 / 8)  {
+        document.write( (contador * 8) + " - ");
+        contador = contador + 1;
+      }
+  </script>
+</body>
+</html>

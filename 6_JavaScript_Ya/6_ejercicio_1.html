@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<!-- 
+  if (condicion) { ... }
+
+  if (condicion) { ... } else { .... }
+
+  if (condicion) { ... } else if (otraCond) { .... }
+
+  if (condicion) { ... } 
+  else if (otraCond) { .... } 
+  else { .... }
+
+  1 - Que diga no promocionado cuando no llegue a 7 la media
+  2 - En vez de 3 notas, que el usuario indique qué cantidad de notas hay que pedir.
+  
+-->
+<script>
+  var notas = new Array();
+  var cantidadTexto = prompt('Ingrese cantidad de notas','');
+  var cantidad = parseInt(cantidadTexto);
+
+  for (var i = 0; i < cantidad; i++) {
+    var notaTexto=prompt('Ingrese primer nota','');
+    notas[i] = parseInt(notaTexto);
+  }
+  var suma = 0;
+  //suma=nota1+nota2+nota3; 
+  //suma = notas[0] + notas[1] + notas[2]; /// ...
+  for (i = 0; i < notas.length; i++) {
+    suma = suma + notas[i];
+  }
+
+  var promedio;
+  promedio=suma/notas.length;
+  if (promedio>=7)
+  {
+    document.write('Promocionado');
+  } else {
+    document.write('No promocionado');
+  }
+</script>
+
+</body>
+</html>
