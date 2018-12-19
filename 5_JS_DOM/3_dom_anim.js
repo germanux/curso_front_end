@@ -21,3 +21,4 @@ function cuandoSePulsaElBoton() {
 // Hacemos que cuando se pulse el botón, se pausen los circulos
 // <INPUT type="button" value="¡Pero anímate" onclick="cuandoSePulsaElBoton();"/>
 boton.setAttribute("onclick", "cuandoSePulsaElBoton();");
+
