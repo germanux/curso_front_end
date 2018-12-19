@@ -1,0 +1,19 @@
+- Crea una función que:
+	1 - Muestre 6 cabeceras del H1 al H6 con titulo que se pase por parametro (mediante un bucle).
+		function muestraSeisCaberas(titulo) {...}		
+		Resultado: 	<h1>titulo</h1><h2>titulo</h2>...
+	2 - Otra Reciba 3 parámetros.
+		Los dos primeros son los operandos, el 3º el operador (suma "+", resta "-", multipl "*", div "/") y que muestre el resultado (dentro de la función)
+			PISTA: Usando condicionales y RETURN
+			opera(3, 5, "+")		-> 8
+			opera(2, 3, "*")		-> 6
+	3 - Una función que eleve al cubo un número. Comprobar que funciona con 3 (27) y con 4 (64).
+
+- Crea las mismas funciones pero usando...:
+	1 - En la 1, con un array que tenga los valores
+			var cabeceras = ["H1", "H2", "H3", ... "H6"]
+	2 - En la 2, dos funciones que hagan lo mismo pero:
+			- Una usando la función eval(), que ejecuta un texto como si fuera código JS
+			- Dos usando sólo el operador ternario (sin if())
+	3 - Una función que eleve a la X potencia (segundo parámetro), mediante un bucle y si sabes lo que es una fución recursiva, mediante una función recursiva.
+	
