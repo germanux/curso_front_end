@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+    <h1>Cabecera</h1>
+    
+<script>
+  /****** - Crea una función que: ********/
+  /* 2 - Otra Reciba 3 parámetros.
+		Los dos primeros son los operandos, el 3º el operador (suma "+", resta "-", multipl "*", div "/") y que muestre el resultado (dentro de la función)
+	2 - En la 2, dos funciones que hagan lo mismo pero:
+			- Una usando la función eval(), que ejecuta un texto como si fuera código JS
+			- Dos usando sólo el operador ternario (sin if())
+      PISTA: Usando condicionales*/
+  function operaConEval(op_1, op_2, op) {
+    return eval("" + op_1 + op + op_2);
+  }
+  document.write("5 + 3 = " + operaConEval(5, 3, "+") + "<br/>" ); // 8
+  document.write("3 x 2 = " + operaConEval(3, 2, "*") + "<br/>" ); // 6
+
+  function operaConTernario(op_1, op_2, op) {
+    var resultado;
+    resultado = op == "+" ? op_1 + op_2 :
+				op == "-" ? op_1 - op_2 :
+				op == "*" ? op_1 * op_2 : 
+				op == "/" ? op_1 / op_2 : 0;
+    document.write("" + op_1 + op + op_2 +" = " + resultado + "<br/>" );
+  }
+  operaConTernario(7, 2, "-");  // 7 - 2 = 5
+  operaConTernario(24, 6, "/"); // 4
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+    <h1>Cabecera</h1>
+    
+<script>
+  /****** - Crea una función que: ********/
+	/*1 - Muestre 6 cabeceras del H1 al H6 con titulo que se pase por parametro (mediante un bucle).
+		function muestraSeisCaberas(titulo) {...}		
+	1 - En la 1, con un array que tenga los valores
+			var cabeceras = ["H1", "H2", "H3", ... "H6"]
+    Resultado: 	<h1>titulo</h1><h2>titulo</h2>...*/  
+	function dameSeisCabeceras(texto) // nivel = H1, H2...
+	{
+		var cabeceras = ["h1", "h2", "h3", "h4", "h5", "h6"];
+		
+		for (var nivel   = 1; nivel <= 6; nivel++ ) {
+		  var abreH = "<" + cabeceras[nivel] + ">";
+		  var cierraH = "</h" + cabeceras[nivel] + ">";
+		  document.write( abreH + texto + cierraH);
+		}
+  }  
+  muestraSeisCabeceras("El título repetido seis veces");
+ 
+</script>
+	</body>
+</html>

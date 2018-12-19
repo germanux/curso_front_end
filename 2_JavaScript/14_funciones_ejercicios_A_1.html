@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+    <h1>Cabecera</h1>
+    
+<script>
+  /****** - Crea una función que: ********/
+	/*1 - Muestre 6 cabeceras del H1 al H6 con titulo que se pase por parametro (mediante un bucle).
+		function muestraSeisCaberas(titulo) {...}		
+    Resultado: 	<h1>titulo</h1><h2>titulo</h2>...*/  
+	
+	///// FORMA 1: Sólo con una función
+	// Creación de la función
+	function muestraSeisCabeceras(texto) // nivel = H1, H2...
+	{
+		for (var nivel   = 1; nivel <= 6; nivel++ ) 
+		{	// Parte del código que se repite 6 veces
+		  var abreH = "<h" + nivel + ">";
+		  var cierraH = "</h" + nivel + ">";
+		  document.write( abreH + texto + cierraH);
+		}
+	}	
+	////// FORMA 2: Con dos funciones, reutilizando la función de la práctica vista en clase
+	// Función que crea una cabecera a partir de un título.
+	// Por ej. si  texto = "Un título" el resultado que devuelve con return es "<h1>Un título</h1>" 
+	function dameCabecera  (  texto, nivel) // nivel = H1, H2...
+	{
+		var abreH = "<h" + nivel + ">";
+		var cierraH =  "</h"  +  nivel + ">";
+		return abreH + texto + cierraH;
+	}
+	// Función que muestra las 6 cabeceras. Esta llama a la anterior, que recoge el resultado devuelto,
+	// y como está dentro del bucle, se repite 6 veces.
+	function muestraSeisCabeceras_BIS(titulo) {
+		for (var i = 1; i  <= 6; i++) {
+			document.write(dameCabecera(titulo, i));
+		}
+	}
+	
+	// LLAMADAS A las funciónes  
+	muestraSeisCabeceras("Título con forma una sóla función");
+	muestraSeisCabeceras_BIS("El título repetido seis veces, mediante 2 fun");
+</script>
+	</body>
+</html>
