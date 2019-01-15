@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fechas con JS</title>
+</head>
+<body>
+  <div id="div_texto"></div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>   
+    function compararPorAnio(a, b) {
+      /*if (a.getTime() < b.getTime())  // Comparar milisegundos
+        return -1;
+      else if ... */  
+
+      if (a.getFullYear() > b.getFullYear()) {
+        return +1;
+      } else if (a.getFullYear() < b.getFullYear()) {
+        return -1;
+      } else {
+        if (a.getMonth() > b.getMonth())  return 1;
+        else if(a.getMonth() < b.getMonth()) return -1;
+        else {
+          return 0; // Comparación por día
+        }
+      }
+    }
+  // Crearemos un array con fechas,
+  // Ordenaremos por el modo por defecto de sort (alfabético según Joana)
+  // Haremos una función específica
+    function funcionPrincipal() {
+
+      var fechas = [
+        new Date(12345678912345),
+        new Date(2018, 12, 6, 9), // 9 de la mañana del 1 de dic,
+        new Date("January 7, 2019 09:00:00"),
+        new Date("February 7, 2018 09:00:00"),
+      ];
+      $("#div_texto").html(  (new Date()).toString()  );
+      // Mostramos las fechas tal cual:
+      $("#div_texto").append("<h2>" + fechas.join("<br/>") + "</h2>");
+      // Ordenamos por defecto (Por orden alfabético)
+      var fechasSort = fechas.sort();
+      $("#div_texto").append("</br><h2>" + fechasSort.join("<br/>") + "</h2>");
+      // Comprobamos la función de comparación, que devuelve 1, 0 ó -1
+      $("#div_texto").append("</br><h2>Resultado: " +
+        compararPorAnio(new Date(), fechas[3]) + "</h2>" );
+      // Ordenamos las fechas por año
+      fechasSort = fechas.sort(compararPorAnio);
+      $("#div_texto").append("</br><h2>" + fechasSort.join("<br/>") + "</h2>");
+    }
+
+    jQuery(document).ready( funcionPrincipal );
+  </script>  
+</body>
+</html>

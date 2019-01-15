@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fechas con JS</title>
+</head>
+<body>
+  <div id="div_texto"></div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+    
+    function dameHora() {
+      var fechaActual = new Date();
+      var horaFormateada = " Mes: "  + dameMesArr(fechaActual.getMonth());
+      horaFormateada    += " D&iacute;a: "  + fechaActual.getDate();
+      horaFormateada    += " Hora: " + fechaActual.getHours();
+      horaFormateada    += " Min: "  + fechaActual.getMinutes();
+      horaFormateada    += " Seg: "  + fechaActual.getSeconds();
+      return horaFormateada;
+    }
+    function dameHoraUTC() {
+      var fechaActual = new Date();
+      var horaFormateada = " Hora: "  + fechaActual.getUTCHours();      
+      return horaFormateada;
+    }
+    function dameMes(mes) {
+        if (mes == 0)  return "Enero";
+        else if (mes == 1) return "Febrero";
+        else if (mes == 2) return "Marzo";
+    }
+    function dameMesArr(mes) {
+      var meses = ["Enero", "Febrero", "Marzo", "Abril"];
+      return meses[mes];
+    }
+    function funcionPrincipal() {
+        var fechaActual = new Date();
+        $("#div_texto").html("Año: " + fechaActual.getFullYear());
+        $("#div_texto").html( $("#div_texto").html() + dameHora());
+        $("#div_texto").html( $("#div_texto").html() + " UTC: " + dameHoraUTC());
+    }
+    // jQuery(document).ready( funcionPrincipal );
+
+    setInterval(funcionPrincipal, 2000);
+
+    var posX = 0;
+    function moverDiv() {
+      var valoresCss = new Object();
+      valoresCss.marginLeft = posX + "px";
+      $("#div_texto").css( valoresCss );      
+      // $("#div_texto").css( { "margin-left": posX + "px"} );
+      posX++;
+    }
+    setInterval(moverDiv, 50);
+  </script>  
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fechas con JS</title>
+</head>
+<body>
+  <div id="div_texto"></div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>    
+    function funcionPrincipal() {
+      var arrA = [8, 3, 9, 5];
+      var arrB = new Array("Peras", "Arándanos", "Cerezas", "Manzanas");
+      var arrMezcla = arrA.concat(arrB);
+      for (var i = 0; i < arrMezcla.length; i++) {
+        $("#div_texto").html(
+          $("#div_texto").html() + "<p>" + arrMezcla[i] + "</p>"
+        );
+      }
+      // El array, tal y como está, juntado en un único texto, separado por comas
+      $("#div_texto").append("<br/>JOIN: " + arrMezcla.join());
+      // Revertimos el orden del array, y lo mostramos
+      arrMezcla = arrMezcla.reverse();
+      $("#div_texto").append("<br/>REVERSE: " + arrMezcla.join());
+      // Ordenamos el array, y lo mostramos
+      arrMezcla = arrMezcla.sort();
+      $("#div_texto").append("<br/>SORT: " + arrMezcla.join());
+    }
+    jQuery(document).ready( funcionPrincipal );
+  </script>  
+</body>
+</html>
