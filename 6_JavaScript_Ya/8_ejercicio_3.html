@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ejercicio 8, 3:</h1>
+  <h2>Deducir el n&uacute;mero de cifras</h2>
+  N&uacute;mero: 
+  <input id="inputNum" type="number"  placeholder="Indique un número de 3 cifras"/><br/>
+  <input type="button" onclick="funNumCifras();" value="Calcular cifras"/>
+  <div id="divMensaje">
+    Resultado:
+  </div>
+  <script>
+    function funNumCifras() {
+      var inputNum = document.getElementById("inputNum");
+      var valorNum = parseInt(inputNum.value);
+      var divMensaje = document.getElementById("divMensaje");
+      /*/ Mediante nodos:
+      var nodeResult = document.createTextNode("Numero " + valorNum);
+      divMensaje.appendChild(nodeResult);
+      // Mediante nodo y texo
+      divMensaje.childNodes[0].text = "Numero " + valorNum;
+      // Mediante sustitucion HTML interno*/
+      if (valorNum < 0 || valorNum > 999 || isNaN(valorNum)) {
+        divMensaje.innerHTML="Error: Introduzca número positivo menor que 1000";
+      } 
+      else {  // Cuando está en el rango, comprobamos
+        if (valorNum < 10) {
+          divMensaje.innerHTML = "1 cifra";
+        } else if (/*valorNum >= 10 && */ valorNum < 100) {
+          divMensaje.innerHTML = "2 cifras";
+        } else {
+          divMensaje.innerHTML = "3 cifras";
+        }
+      }
+      var valorNumEnTexto = "" + valorNum;
+      
+      if (valorNum < 0 || valorNum > 999 || isNaN(valorNum)) {
+        divMensaje.innerHTML +="<br/>Error: Introduzca número positivo menor que 1000";
+      } else {  // Cuando está en el rango, comprobamos
+        divMensaje.innerHTML += "<br/>" + valorNumEnTexto.length + " cifras";      
+      }
+      //divMensaje.innerHTML="Numero " + valorNum;
+    }
+  </script>  
+</body>
+</html>
