@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <div id="div_texto"></div>
+    <script src="js/jquery-3.3.1.js"></script>
+  <script>
+    // funcionInexistente("Buuuuuu!");
+    // $("?div_texto").html("Eeeeeh!");
+    //throw "Provocando un error";
+    function funcionPrincipal() {
+      try {
+        // Sin almohadilla pero con interrogante
+        throw new Error("Provocando un error");
+        $("?div_texto").html("<br/>Eeeeeh!");
+        funcionInexistente("Buuuuuu!");
+      } catch (elError) {
+        $("#div_texto").append("<p>Ha habido una excepción</p>");
+        $("#div_texto").append(elError.message);
+      } finally {
+        $("#div_texto").append("<br/>Comprobando FINALLY.");
+      }
+
+      $("#div_texto").append("<br/>El programa se sigue ejecutando");
+    }
+    $(document).ready(funcionPrincipal);
+  </script>
+</body>
+</html>
