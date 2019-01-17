@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>T&iacute;tulo</title>
+		<meta charset="UTF-8"/>		
+	</head>
+	<body>
+    <h1>Cabecera</h1>
+    
+<script>
+  /****** - Crea una función que: ********/
+	/*1 - Muestre 6 cabeceras del H1 al H6 con titulo que se pase por parametro (mediante un bucle).
+		function muestraSeisCaberas(titulo) {...}		
+    Resultado: 	<h1>titulo</h1><h2>titulo</h2>...*/  
+  function dameSeisCabecera(texto) // nivel = H1, H2...
+  {
+    for (var nivel   = 1; nivel <= 6; nivel++ ) {
+      var abreH = "<h" + nivel + ">";
+      var cierraH = "</h" + nivel + ">";
+      document.write( abreH + texto + cierraH);
+    }
+  }  
+  function dameCabecera  (  texto, nivel) // nivel = H1, H2...
+  {
+    var abreH = "<h" + nivel + ">";
+    var cierraH =  "</h"  +  nivel + ">";
+    return abreH + texto + cierraH;
+  }
+  function muestraSeisCabeceras(titulo) {
+    for (var i = 1; i  <= 6; i++) {
+      document.write(dameCabecera(titulo, i));
+    }
+  }
+  muestraSeisCabeceras("El título repetido seis veces");
+
+  /* 2 - Otra Reciba 3 parámetros.
+		Los dos primeros son los operandos, el 3º el operador (suma "+", resta "-", multipl "*", div "/") y que muestre el resultado (dentro de la función)
+      PISTA: Usando condicionales*/
+  function operaReturn(op_1, op_2, op) {
+    if (op == "+") { return op_1 + op_2; }
+    else if (op == "-") { return op_1 - op_2; }
+    else if (op == "*") { return op_1 * op_2; }
+    else if (op == "/") { return op_1 / op_2; }
+    else return 0;
+  }
+  document.write("5 + 3 = " + operaReturn(5, 3, "+") + "<br/>" ); // 8
+  document.write("3 x 2 = " + operaReturn(3, 2, "*") + "<br/>" ); // 6
+
+  function operaWrite(op_1, op_2, op) {
+    var resultado;
+    if (op == "+") { resultado = op_1 + op_2; }
+    else if (op == "-") { resultado = op_1 - op_2; }
+    else if (op == "*") { resultado = op_1 * op_2; }
+    else if (op == "/") { resultado = op_1 / op_2; }
+    else resultado = 0;
+    document.write("" + op_1 + op + op_2 +" = " + resultado + "<br/>" );
+  }
+  operaWrite(7, 2, "-");  // 7 - 2 = 5
+  operaWrite(24, 6, "/"); // 4
+
+  /*3 - Una función que eleve al cubo un número. Comprobar que funciona con 3 (27) y con 4 (64).*/
+  function elevaCubo(numero) {
+    return numero * numero * numero;
+  }
+  document.write("3 al cubo = " + elevaCubo(3) + "<br/>" ); // 27
+  document.write("4 al cubo = " + elevaCubo(4) + "<br/>" ); // 64 
+
+  /*
+- Crea una función que:
+	1 - Muestre 6 cabeceras del H1 al H6 con titulo que se pase por parametro (mediante un bucle).
+		function muestraSeisCaberas(titulo) {...}		
+		Resultado: 	<h1>titulo</h1><h2>titulo</h2>...
+	2 - Otra Reciba 3 parámetros.
+		Los dos primeros son los operandos, el 3º el operador (suma "+", resta "-", multipl "*", div "/") y que muestre el resultado (dentro de la función)
+			PISTA: Usando condicionales y RETURN
+			opera(3, 5, "+")		-> 8
+			opera(2, 3, "*")		-> 6
+	3 - Una función que eleve al cubo un número. Comprobar que funciona con 3 (27) y con 4 (64).
+
+- Crea las mismas funciones pero usando...:
+	1 - En la 1, con un array que tenga los valores
+			var cabeceras = ["H1", "H2", "H3", ... "H6"]
+	2 - En la 2, dos funciones que hagan lo mismo pero:
+			- Una usando la función eval(), que ejecuta un texto como si fuera código JS
+			- Dos usando sólo el operador ternario (sin if())
+	3 - Una función que eleve a la X potencia (segundo parámetro), mediante un bucle y si sabes lo que es una fución recursiva, mediante una función recursiva.
+	
+  */
+</script>
+	</body>
+</html>
