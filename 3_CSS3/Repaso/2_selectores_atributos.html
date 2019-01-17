@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    a[href] {
+      font-size: 20px;
+    }
+    a[href="mailto:direccion@correo.com"] {
+      font-style: italic;
+    }
+    a[href*="ejemplo"] {
+      color: red;
+    }
+    a[href^="mailto:"] {
+      color: blue;
+    }
+    a[href$="php"] {
+      color: green;
+    }
+    a:hover {
+      background-color: yellow;
+      font-size: 22px;
+    }
+    input:valid {
+      background-color: green;
+    }
+    input:focus {
+      background-color: cyan;
+    }
+    input:invalid {
+      background-color: red;
+    }
+    input:even {
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><a>Enlace a sin HREF</a></li>
+    <li><a href="http://www.unaweb.com/ejemplos">
+        Enlace a ejemplo</a></li>
+    <li><a href="mailto:direccion@correo.com">
+        Enlace a email</a></li>
+    <li><a href="http://www.unaweb.com/ejemplo.php">
+        Enlace a fichero PHP</a></li>
+  </ul>
+  <form>
+      <input type="text" required/><br/>
+      <input type="text" required/><br/>
+      <input type="text" required/><br/>
+      <input type="text" disabled value="deshabilitado"/><br/>
+  </form>
+</body>
+
+</html>

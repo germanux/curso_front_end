@@ -27,13 +27,17 @@
       document.getElementById("lista_frutas").innerHTML += "<option value='"
         + otrasFrutas[otrasFrutas.length - 1] + "'></option> ";
     }
-
-  $(document).ready(function() {
+    function cuandoEstaLista() {
     $("#lista_frutas").append("<option value='Uvas'></option> ");
     for (var i = 0; i < otrasFrutas.length; i++ ) {
       jQuery("#lista_frutas").append("<option value='" + otrasFrutas[i] + "'></option> ");
     }
-  });
+  }
+  jQuery(document).ready(cuandoEstaLista);
+
+  function duplica(valor)  {
+    return valor * 2;
+  }
    </script>
 </body>
 </html>
