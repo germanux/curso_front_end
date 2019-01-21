@@ -7,34 +7,41 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/Footer-with-button-logo.css">
 	<style type="text/css">
+		#div_presentacion, #div_form, #div_listado, #div_de_1_en_1 {
+			display: none;
+		}
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
 	</style>
 </head>
 
 <body>
 	<!-- Ver más de NAVBAR con Bootstrap: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
-	<nav>
-		<div>
-			<div>
-				<button type="button">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#">Gestor Portfolios</a>
+				<a href="#" class="navbar-brand">Gestor Portfolios</a>
 			</div>
-			<div>
-				<ul>
-					<li><a href="#">Inicio</a></li>
-					<li>
-						<a href="#">Ver portfolios <span></span></a>
-						<ul>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a id="ver_presentacion" data-que-mostrar="div_presentacion" href="#">Inicio</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ver portfolios <span></span></a>
+						<ul class="dropdown-menu">
 							<!-- Ver data y como obtenerlo: https://api.jquery.com/data/ -->
-							<li><a href="#">Listado completo</a></li>
-							<li><a href="#">De 1 en 1</a></li>
-							<li><a href="#">Por categorías</a></li>
+							<li><a href="#" id="ver_listado" data-que-mostrar="div_listado">Listado completo</a></li>
+							<li><a href="#" id="ver_1_en_1" data-que-mostrar="div_de_1_en_1">De 1 en 1</a></li>
+							<li><a href="#" id="ver_por_categ" >Por categorías</a></li>
 						</ul>
 					</li>
-					<li><a href="#" >Nuevo</a></li>
+					<li><a href="#" id="ver_alta" data-que-mostrar="div_form">Nuevo</a></li>
 					<li><a href="#">Eliminar</a></li>
 				</ul>
 				<form >
@@ -54,8 +61,8 @@
 			</div>
 		</div>
 	</nav>
-	<div >
-		<div >
+	<section class="container">
+		<div id="div_presentacion">
 			<h1>Presentación Gestor Portfolio</h1>
 			<p>Una imágen de presentación estaría bien </p>
 			<br /> <br /> <br />
@@ -67,7 +74,7 @@
 			<br />
 			<p>Y también pretendemos ... bla bla bla bla bla bla bla bla bla bla bla bla </p>
 		</div>
-		<div >
+		<div id="div_form">
 			<!-- Formulario Bootstrap: https://getbootstrap.com/docs/4.0/components/forms/ -->
 			<form >
 				<div >
@@ -129,7 +136,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div>
+		<div id="div_de_1_en_1">
 			<div >
 				<input  type="button" value="&laquo;" />
 				<div > </div>
@@ -169,7 +176,7 @@
 				<input  type="button" value="&raquo;" />
 			</div>
 		</div>
-	</div>
+	</section>
 	<!-- Footer (par ver más: https://tutorialzine.com/2016/10/freebie-5-fantastic-bootstrap-footers -->
 	<footer id="myFooter">
 		<div >
@@ -264,10 +271,22 @@
 	// Otra manera de crear funciones: ver más en https://www.w3schools.com/js/js_function_definition.asp
 	var funcionActualizarTabla = function () {
 	}
-	function inicializar() {
+	var inicializar = function() {
 		$("#div_presentacion").show(1000);
+		// $("a[id^='ver_']").click(
+		$("#ver_presentacion,#ver_alta,#ver_listado,#ver_1_en_1").click(
+			function() {
+				var idDIV = $(this).data("que-mostrar");
+				mostrarDIV_Y_ocultarResto(idDIV);
+			}
+		);
 	}
 	var mostrarDIV_Y_ocultarResto = function (id) {
+		$("#div_presentacion").hide(1000);
+		$("#div_form").hide(1000);
+		$("#div_listado").hide(1000);
+		$("#div_de_1_en_1").hide(1000);
+		$(`#${id}`).show(1000);
 	}
 	var mostrarCV = function (index) {
 	}
