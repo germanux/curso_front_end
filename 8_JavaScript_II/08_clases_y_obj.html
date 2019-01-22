@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clases y objetos</title>
+</head>
+<body>
+  <h1>Clases y objetos</h1>
+  <script>
+
+    // Sólo en EcmaScript 6
+    class Rectangulo {
+      // Se definen las características fijas que todo objeto de esta clase tiene que tener
+      constructor(nuevoAncho, nuevoAlto) {
+        // Al instanciarse, se aplican los valores recibidos en el coonstructor a las variables miembro
+        this.ancho = nuevoAncho; // this = este objeto (self)
+        this.alto = nuevoAlto;                
+      }
+      // Sólo ponemos el nombre del método, y los parámetros entre paréntesis, seguido del cuerpo
+      area() {  // método
+        var areaTotal = this.ancho * this.alto;
+        return areaTotal;
+      }
+      perimetro () {
+        return this.alto * 2 + this.ancho * 2;
+      }
+    }   
+    // Circulo: area = Math.PI * radio * radio
+    // Perimetro = 2 * PI * radio
+    var otroRect = new Rectangulo(5, 3);
+    document.write("<h3>Area otroRect: " + otroRect.area() + "</h3>");
+
+    var unRect = new Rectangulo();
+    unRect.ancho = 10;
+    unRect.alto = 6;
+    document.write("<h3>Area: " + unRect.area() + "</h3>");
+    document.write("<h3>Perimetro: " + unRect.area() + "</h3>"); 
+
+    class Circulo {
+      // radio a secas, es un parámetro, es un variable LOCAL a la función constructora
+      // Mientras que this.radio es una variable MIEMBRO (propiedad) de la clase, y por tanto, de los objetos generados con esta clase.
+      constructor(radio) {
+        this.radio = radio;
+      }
+      area() {
+        var areaTotal = Math.PI * Math.pow(this.radio, 2);
+        return areaTotal;
+      }
+      perimetro() {
+        return 2 * this.radio * Math.PI;
+      }
+    }
+    // alert(areaTotal); // MAL, undefined
+    // alert(radio); 
+    
+    var unCirculo = new Circulo(10); // radio = 10
+    document.write(`Radio: ${unCirculo.radio}  <br/>
+                    Area: ${unCirculo.area()}  <br/>
+                    Perimetro: ${unCirculo.perimetro()}`);
+
+    class Persona {
+      constructor(nom, fechaNacimiento) {
+        this.nombre = nom;
+        var fechaActual = new Date();
+        this.edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();  // Calcular edad en función de el mes y el día
+        // 5 MAY    1 Enero
+        if (fechaActual.getMonth() > fechaNacimiento.getMonth() ) {
+          this.edad --;   // No ha cumplido años
+        } else if (fechaActual.getMonth() == fechaNacimiento.getMonth()) {
+          // Lo mismo pero con los días,otro IF
+        }
+      }
+      esAdulto() {
+        if (this.edad < 18 ) {
+          return this.nombre + " NO es adulto porque tiene " + this.edad + " años<br/>";
+        } else {
+          return `${this.nombre} es adulto porque tiene ${this.edad} años<br/>`;
+        }
+      }      
+    }
+    var juan = new Persona("Juan", new Date(2008, 9, 5)); // OCT
+    var ana = new Persona("Ana", new Date(1998, 10, 5));
+    var alberto = new Persona("Alberto", new Date(1988, 11, 5));
+    document.write(juan.esAdulto());
+    document.write(ana.esAdulto());
+    // alberto.edad = 10; // cambiando edad de 30 a 10
+    document.write(alberto.esAdulto());
+  </script>
+</body>
+</html>
