@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Gestor de Portfolio</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/Footer-with-button-logo.css">
+	<style type="text/css">
+		#div_presentacion,
+		#div_form,
+		#div_listado,
+		#div_de_1_en_1 {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Ver más de NAVBAR con Bootstrap: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Gestor Portfolios</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#" id="ver_presentacion" data-que-mostrar="div_presentacion">Inicio</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ver portfolios <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<!-- Ver data y como obtenerlo: https://api.jquery.com/data/ -->
+							<li><a href="#" id="ver_listado" data-que-mostrar="div_listado">Listado completo</a></li>
+							<li><a href="#" id="ver_1_en_1" data-que-mostrar="div_de_1_en_1">De 1 en 1</a></li>
+							<li><a href="#" id="ver_por_categ">Por categorías</a></li>
+						</ul>
+					</li>
+					<li><a href="#" id="ver_alta" data-que-mostrar="div_form">Nuevo</a></li>
+					<li><a href="#" id="ver_elimninar" data-que-mostrar="div_form">Eliminar</a></li>
+				</ul>
+				<form class="navbar-form navbar-left" action="/action_page.php">
+					<div class="input-group">
+						<input id="texto_busqueda" type="text" class="form-control" placeholder="Introduzca tecnología">
+						<div class="input-group-btn">
+							<button id="btnBuscar" class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div id="div_presentacion">
+			<h1>Presentación Gestor Portfolio</h1>
+			<p>Una imágen de presentación estaría bien </p>
+			<br /> <br /> <br />
+			<br />
+			<h2>Proyecto conjunto</h2>
+			<p>Aquí pretendemos ... bla bla bla bla bla bla bla bla bla bla bla bla </p>
+			<p>Y también pretendemos ... bla bla bla bla bla bla bla bla bla bla bla bla </p>
+			<br /> <br /><br /> <br /><br /> <br />
+			<br />
+			<p>Y también pretendemos ... bla bla bla bla bla bla bla bla bla bla bla bla </p>
+		</div>
+		<div id="div_form">
+			<!-- Formulario Bootstrap: https://getbootstrap.com/docs/4.0/components/forms/ -->
+			<form role="form">
+				<div class="form-group row">
+					<div class="col-sm-2"> </div>
+					<label for="nombre" class="col-sm-2 col-12  col-form-label">Nombre y apellidos:</label>
+					<div class="col-sm-6">
+						<input type="text" id="nombre" required="true" placeholder="Nombre y apellidos" class="form-control" />
+					</div>
+					<div class="col-sm-2"> </div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-2"> </div>
+					<label for="nombre" class="col-sm-2 col-12  col-form-label">Descripción:</label>
+					<div class="col-sm-6">
+						<textarea id="descripcion" class="form-control" required="true" placeholder="Descripción" /></textarea>
+					</div>
+					<div class="col-sm-2"> </div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-2"> </div>
+					<label for="nombre" class="col-sm-2 col-12  col-form-label">Nombre ficheros:</label>
+					<div class="col-sm-6">
+						<input type="text" id="nombre_fichero" required="true" placeholder="Introducir nombre sin extensión: nombre_apellidos (nombre_apellidos.png para imagen, nombre_apell.html para CV)"
+						 class="form-control" />
+					</div>
+					<div class="col-sm-2"> </div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-2"> </div>
+					<input id="altaPortfolio" type="submit" value="AÑADIR" class="btn btn-success col-sm-4" />
+					<input id="eliminarPortfolio" type="submit" value="ELIMINAR" class="btn btn-danger col-sm-4" />
+					<div class="col-sm-2"> </div>
+				</div>
+			</form>
+		</div>
+		<div id="div_listado">
+			<h2>Listado CVs y Portfolios</h2>
+			<h3>Usando de bootstrap: .table .table-striped .table-bordered .table-hover .table-sm</h3>
+			<table class="table table-striped table-bordered table-hover table-sm">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Descripcion</th>
+						<th>Curriculum</th>
+					</tr>
+				</thead>
+				<tbody id="tbody_lista_cvs">
+					<tr>
+						<td>Ana Perez</td>
+						<td>Desarrolladora Front-End maquetadora y programadora</td>
+						<td><a href="ejemplo_cv_1.html">Ver CV</a></td>
+					</tr>
+					<tr>
+						<td>Rubén González</td>
+						<td>Desarrollador Front-End maquetador y marketing</td>
+						<td><a href="ejemplo_cv_2.html">Ver CV</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="div_de_1_en_1">
+			<div class="form-group row">
+				<input id="btnAnterior" type="button" value="&laquo;" class="btn btn-default col-sm-1" />
+				<div class="col-sm-6"> </div>
+				<input id="btnSiguiente" type="button" value="&raquo;" class="btn btn-default col-sm-1" />
+			</div>
+			<div id="div_cv">
+				<h1>Curriculum Vitae</h1>
+				<h2>Datos personales</h2>
+				<dl>
+					<dt>Nombre:</dt>
+					<dd id="texto_nombre">Pues el nombre</dd>
+					<dt>Email:</dt>
+					<dd>email@dominio.com</dd>
+				</dl>
+				<div>
+					<figure>
+						<!-- Ver más de https://uniwebsidad.com/libros/bootstrap-3/capitulo-4/imagenes -->
+						<img id="img_foto" src="images/nom_apell_1.jpg" alt="Foto de Nombre y Apell" class="img-circle">
+						<figcaption>Foto o dibujo</figcaption>
+					</figure>
+					<h2>Descripción</h2>
+					<div id="texto_descripcion">
+						<ul>
+							<li>
+								<h3>Grado Superior en Lo que sea </h3>
+								<p>Madrid</p>
+								<p>2016</p>
+							</li>
+						</ul>
+					</div>
+					<a id="enlace_cv" href="ejemplo_cv_1.html">Ver CV completo</a>
+				</div>
+			</div>
+			<div class="form-group row">
+				<input id="btnAnterior" type="button" value="&laquo;" class="btn btn-default col-sm-1" />
+				<div class="col-sm-6"> </div>
+				<input id="btnSiguiente" type="button" value="&raquo;" class="btn btn-default col-sm-1" />
+			</div>
+		</div>
+	</div>
+	<!-- Footer (par ver más: https://tutorialzine.com/2016/10/freebie-5-fantastic-bootstrap-footers -->
+	<footer id="myFooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<h2 class="logo"><a href="#"> LOGO </a></h2>
+				</div>
+				<div class="col-sm-2">
+					<h5>Get started</h5>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Sign up</a></li>
+						<li><a href="#">Downloads</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-2">
+					<h5>About us</h5>
+					<ul>
+						<li><a href="#">Company Information</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Reviews</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-2">
+					<h5>Support</h5>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Help desk</a></li>
+						<li><a href="#">Forums</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-3">
+					<div class="social-networks">
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+					</div>
+					<button type="button" class="btn btn-default">Contact us</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<p>© 2018 Copyright Text </p>
+		</div>
+	</footer>
+
+	<!-- Footer -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+	// Ver más de clases: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes
+	class Portfolio {
+
+		constructor(nombre, textoDescripcion, nombreFichero) {
+			// Aquí usamos arguments. Ver más: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/arguments
+			if (arguments.length == 3) {
+				this.nombre = nombre;
+				this.descripcion = textoDescripcion;
+				this.fichero = nombreFichero;
+			} else if (arguments.length == 1) {
+				this.nombre = arguments[0].nombre;
+				this.descripcion = arguments[0].descripcion;
+				this.fichero = arguments[0].fichero;
+			} else {
+				// Ver más console: https://developer.mozilla.org/es/docs/Web/API/Console
+				console.error("Sólo se admite 1 ó 3 argumentos en el constructor");
+			}
+		}
+		htmlTabla() {
+			var nombre = this.nombre;
+			var textoDescripcion = this.descripcion;
+			var nombreFichero = this.fichero;
+			// Para ver explicación: http://2ality.com/2015/01/es6-strings.html
+			var htmlTR = `<tr>
+					<td>${nombre}</td>
+					<td>${textoDescripcion}</td>
+					<td><a href=">${nombreFichero}.html">Ver CV</a></td>
+				</tr>`;
+			return htmlTR;
+		}
+	}
+	// Otro artículo sobre clases: https://www.todojs.com/clases-en-ecmascript-2015-es6/
+	class ListaPortfolios {
+		constructor() {
+			if (typeof (Storage) === "undefined") {
+				// Sorry! No Web Storage support..
+				alert("No se pueden guardar los datos");
+			} else {
+				// para ver el uso del almacenatmiento local: https://www.w3schools.com/HTML/html5_webstorage.asp
+				this.ls = window.localStorage;
+				this.posActual = 0;
+				if (this.ls.getItem("portfolios") == null) {
+					this.array = [];
+					this.guardarEnLocalStorage();
+				}
+				else {
+					this.cargarDesdeLocalStorage();
+				}
+			}
+		}
+		alta(nombre, descripcion, fichero) {
+			var nuevoPortfolio = new Portfolio(nombre, descripcion, fichero);
+			this.array.push(nuevoPortfolio);
+			this.guardarEnLocalStorage();
+		}
+		eliminar(nombre) {
+			// Ver uso de método splice: https://www.w3schools.com/jsref/jsref_splice.asp
+			for (var i = 0; i < this.array.length; i++) {
+				if (this.array[i].nombre == nombre) {
+					this.array.splice(i, 1);
+				}
+			}
+			this.guardarEnLocalStorage();
+		}
+		cargarDesdeLocalStorage() {
+			// para ver el uso del almacenatmiento local: https://www.w3schools.com/HTML/html5_webstorage.asp
+			var arrayEnTexto = this.ls.getItem("portfolios");
+			this.array = JSON.parse(arrayEnTexto);
+			// Este array lo convertimos en un array de obj Portfolio
+			for (var i = 0; i < this.array.length; i++) {
+				this.array[i] = new Portfolio(this.array[i]);
+			}
+		}
+		guardarEnLocalStorage() {
+			var arrayEnTexto = JSON.stringify(this.array);
+			this.ls.setItem("portfolios", arrayEnTexto);
+		}
+		htmlTabla() {
+			var htmlTbody = "";
+			// Otra manera de recorrer array: https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/
+			for (var htmlTR of this.array) {
+				htmlTbody += htmlTR.htmlTabla();
+			}
+			return htmlTbody;
+		}
+		anterior() {
+			this.posActual--;
+			if (this.posActual < 0)
+				this.posActual = 0;
+			return this.posActual;
+		}
+		siguiente() {
+			this.posActual++;
+			if (this.posActual >= this.array.length)
+				this.posActual = this.array.length - 1;
+			return this.posActual;
+		}
+		buscar(palabra) {
+			for (var i = 0; i < this.array.length; i++) {
+				if (this.array[i].descripcion.toLowerCase().indexOf(palabra.toLowerCase()) >= 0) {
+					this.posActual = i;
+				}
+			}
+			return this.posActual;
+		}
+	}
+	var portfolios;
+
+	// Otra manera de crear funciones: ver más en https://www.w3schools.com/js/js_function_definition.asp
+	var funcionActualizarTabla = function () {
+		$("#tbody_lista_cvs").html(portfolios.htmlTabla());
+	}
+	function inicializar() {
+		portfolios = new ListaPortfolios();
+		$("#div_presentacion").show(1000);
+		$("#altaPortfolio").click(function () {
+			var nom = $("#nombre").val();
+			var desc = $("#descripcion").val();
+			var fich = $("#nombre_fichero").val();
+			portfolios.alta(nom, desc, fich);
+			funcionActualizarTabla();
+		});
+		$("#eliminarPortfolio").click(function () {
+			var nom = $("#nombre").val();
+			portfolios.eliminar(nom);
+			funcionActualizarTabla();
+		});
+		funcionActualizarTabla();
+		$("#ver_presentacion,#ver_alta,#ver_listado,#ver_1_en_1").click(function () {
+			// Ver data de HTML5 y cómo usarlo con jQuery: https://api.jquery.com/data/
+			var idDIV = $(this).data("que-mostrar");
+			mostrarDIV_Y_ocultarResto(idDIV);
+		});
+		$("[id='btnAnterior']").click(function () {
+			// Ver más de animaciones jQUery: https://www.w3schools.com/jquery/jquery_animate.asp
+			// y en http://api.jquery.com/animate/
+			$("#div_cv").animate(
+				{ width: 'hide' }, "slow",
+				function () {
+					mostrarCV(portfolios.anterior());
+					$("#div_cv").animate({ width: 'show' }, "slow");
+				});
+		});
+		$("[id='btnSiguiente']").click(function () {
+			$("#div_cv").animate(
+				{ width: 'hide' }, "slow",
+				function () {
+					mostrarCV(portfolios.siguiente());
+					$("#div_cv").animate({ width: 'show' }, "slow");
+				});
+		});
+		$("#btnBuscar").click(function() {
+			mostrarDIV_Y_ocultarResto("div_de_1_en_1");
+			$("#div_cv").animate(
+				{ width: 'hide' }, "slow",
+				function () {
+					mostrarCV(portfolios.buscar($("#texto_busqueda").val()));
+					$("#div_cv").animate({ width: 'show' }, "slow");
+				});
+		});
+		mostrarCV(portfolios.posActual);
+	}
+	var mostrarDIV_Y_ocultarResto = function (id) {
+		$("#div_presentacion").hide(1000);
+		$("#div_form").hide(1000);
+		$("#div_listado").hide(1000);
+		$("#div_de_1_en_1").hide(1000);
+		$(`#${id}`).show(1000);
+	}
+	var mostrarCV = function (index) {
+		var portfolio = portfolios.array[index];
+		// texto_nombre img_foto texto_descripcion enlace_cv
+		$("#texto_nombre").html(portfolio.nombre);
+		$("#img_foto").attr("src", `images/${portfolio.fichero}.jpg`);
+		$("#texto_descripcion").html(portfolio.descripcion);
+		$("#enlace_cv").attr("href", `CVs/${portfolio.fichero}.html`);
+	}
+	var buscarCV = function(index) {
+		
+		var portfolio = portfolios.array[index];
+	}
+	$(document).ready(inicializar);
+</script>
+
+</html>

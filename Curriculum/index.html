@@ -107,7 +107,7 @@
 						<!--<div > </div>-->
 					<div  class="col-lg-6 col-sm-5 col-12 col-sm-offset-5 row">
 						<input id="altaPortfolio" class="btn btn-success form-control" type="submit" value="AÑADIR" /><br/>
-						<input id="eliminarPortfolio" class="btn btn-danger form-control" type="submit" value="ELIMINAR" />
+						<input id="eliminarPortfolio" class="btn btn-danger form-control" type="button" value="ELIMINAR" />
 					</div>
 					<!--<div > </div>-->
 				</div>
@@ -233,47 +233,41 @@
 <script>
 	// Ver más de clases: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes
 	class Portfolio {
-
-		constructor(nombre) {
-			// Aquí usamos arguments. Ver más: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/arguments
-			if (arguments.length == 3) {
-				this.nombre = nombre;		
+		constructor(nom, desc, nomFich) {
+			if (typeof(nom) == "string" && nom != "") {
+				this.nombre = nom;
+				this.descripcion = desc;
+				this.fichero = nomFich;
 			} else {
-				// Ver más console: https://developer.mozilla.org/es/docs/Web/API/Console
-				console.error("Sólo se admite 1 ó 3 argumentos en el constructor");
+				alert("Error!! Necesitamos textos");
 			}
 		}
-		htmlTabla() {
-			var nombre = this.nombre;
-			// Para ver explicación: http://2ality.com/2015/01/es6-strings.html
-			var htmlTR = "<tr>" + nombre +"</tr>";
-			return htmlTR;
-		}
 	}
-	// Otro artículo sobre clases: https://www.todojs.com/clases-en-ecmascript-2015-es6/
-	class ListaPortfolios {
-		alta(nombre, descripcion, fichero) {
-		}
-		eliminar(nombre) {
-		}
-		cargarDesdeLocalStorage() {
-		}
-		guardarEnLocalStorage() {
-		}
-		htmlTabla() {
-		}
-		anterior() {
-		}
-		siguiente() {
-		}
-		buscar(palabra) {
-		}
-	}
-	// var portfolios;
+	var arrayPortfolios = new Array();
 
-	// Otra manera de crear funciones: ver más en https://www.w3schools.com/js/js_function_definition.asp
-	var funcionActualizarTabla = function () {
+	function rellenarTabla() {
+			/* <tbody id="tbody_lista_cvs">
+					<!-- Todos estos serán eliminados -->
+					<tr>
+						<td>Ana Perez</td>
+						<td>Desarrolladora Front-End maquetadora y programadora</td>
+						<td><a href="ejemplo_cv_1.html">Ver CV</a></td>
+					</tr> */
+		var tbody = $("#tbody_lista_cvs");
+		tbody.html("");
+		for (var i = 0; i < arrayPortfolios.length; i++) {
+			// Creamos cada elemento <TR> para cada portfolio
+			var textoTR = `<tr>
+						<td>`+ arrayPortfolios[i].nombre + `</td>
+						<td>${arrayPortfolios[i].descripcion}</td>
+						<td><a href="${arrayPortfolios[i].fichero}">Ver CV</a></td>
+					</tr>`;	
+			// arrayPortfolios[i].nombre;
+		
+			tbody.append(textoTR);
+		}
 	}
+
 	var inicializar = function() {
 		$("#div_presentacion").show(1000);
 		// $("a[id^='ver_']").click(
@@ -283,6 +277,35 @@
 				mostrarDIV_Y_ocultarResto(idDIV);
 			}
 		);
+		$("#altaPortfolio").click(function () {
+			var nombre = $("#nombre").val();
+			var desc = $("#descripcion").val();
+			var fich = $("#nombre_fichero").val();
+
+			var objetoPortfolio = new Portfolio(nombre, desc, fich);
+			// Añadir elemento a un array con push
+			arrayPortfolios.push(objetoPortfolio);
+			rellenarTabla();
+		});
+
+		$("#eliminarPortfolio").click(function()
+		{
+			var nom = $("#nombre").val();
+			var indice = -1;
+
+			for (let i = 0; i < arrayPortfolios.length; i++) 
+			{
+				if (arrayPortfolios[i].nombre == nom)
+				{
+					indice = i;
+				}
+			}			
+			if (indice != -1)
+			{
+				arrayPortfolios.splice(indice, 1);
+				rellenarTabla();
+			}
+		});
 	}
 	var mostrarDIV_Y_ocultarResto = function (id) {
 		$("#div_presentacion").hide(1000);
