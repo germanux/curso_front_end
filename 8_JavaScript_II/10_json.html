@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Se guarda en RAM en formato binario
+    var hotel = new Object();
+    hotel.nombre = "Hotel NH";  // ASCII: 70 105 
+    hotel.direccion = "C/La que sea, 99";
+    hotel.precio = 70.5;  // 0111001110111001110
+    hotel.abierto = true; // 11111111 00000001
+
+    // Vamos a serializar: Convertir datos en binario en formato texto
+
+    var textoJSONhotel = JSON.stringify(hotel);
+
+    document.write(textoJSONhotel);
+    /* Salida: 
+    {
+      "nombre":"Hotel NH",
+      "direccion":"C/La que sea, 99",
+      "precio":70.5,
+      "abierto":true
+    } */
+
+    var textoJSONotroHotel = `{
+      "nombreHotel":"Hotel TripleVago",
+      "direccion":"C/La que sea, 666",
+      "precio" : 70.5,
+      "abierto": true
+    } `; 
+    var objOtroHotel = JSON.parse(textoJSONotroHotel);
+    alert(objOtroHotel.nombreHotel);
+
+    var miHotel = {
+      "nombre": "Hotel Germán 7 *",
+      "direccion": "Avenida de los Iluminados, 1",
+      "precio": 1000,
+      "abierto": true,
+      "churumbeles": null
+    };
+    document.write(`<h2>${miHotel.nombre}</h2>`);
+    document.write(`<h2>${miHotel.precio}</h2>`);
+    document.write(`<h2>${miHotel.churumbeles}</h2>`);
+    
+
+  </script>
+</body>
+</html>
