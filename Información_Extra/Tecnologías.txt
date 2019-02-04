@@ -1,0 +1,9 @@
+CURRICULUM:
+Curso desarrollo web Front-End
+SKILLS:
+Nivel medio: HTML5, CSS3, JavaScript, jQuery,
+Fundamentos de Bootstrap, TypeScript, Angular, NodeJS, Git, SourceTree/TortoiseGit/Kraken, VisualStudio Code/Notepad++/Atom, FileZilla
+
+Proyecto:
+Gestión de Curriculums y PortFolios
+http://www.athagon.com/portfolios
