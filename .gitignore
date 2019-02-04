@@ -1,0 +1,15 @@
+﻿solo_local/
+*.odp
+*.odp#
+*.js
+*.mp4
+desktop.ini
+*.DS_Store
+platforms/
+plugins/
+*.odt#
+*.wt
+*.~lock.*
+node_modules/
+9_TypeScript/*.js
+/9_TypeScript/01_variables_y_fun.js
